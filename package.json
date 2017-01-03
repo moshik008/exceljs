@@ -1,5 +1,5 @@
 {
-  "name": "exceljs",
+  "name": "exceljs-rtl",
   "version": "0.2.38",
   "description": "Excel Workbook Manager - Read and Write xlsx and csv Files.",
   "private": false,
@@ -7,7 +7,7 @@
   "author": "Guyon Roche",
   "repository": {
     "type": "git",
-    "url": "https://github.com/guyonroche/exceljs.git"
+    "url": "https://github.com/moshik008/exceljs-rtl.git"
   },
   "keywords": [
     "xlsx",
@@ -60,9 +60,9 @@
     "integration-test": "mocha spec/integration --recursive",
     "end-to-end-test": "mocha spec/end-to-end --recursive"
   },
-  "main": "./excel.js",
+  "main": "./excel-rtl.js",
   "files": [
-    "excel.js",
+    "excel-rtl.js",
     "lib",
     "LICENSE",
     "README.md",

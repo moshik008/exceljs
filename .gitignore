@@ -38,3 +38,7 @@ node_modules
 
 # gold internals
 spec/integration/data/gold
+
+# Example directory
+example
+#example/node_modules

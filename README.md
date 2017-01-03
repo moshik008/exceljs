@@ -1,16 +1,20 @@
 # ExcelJS
 
-Read, manipulate and write spreadsheet data and styles to XLSX and JSON.
+Read, manipulate and write spreadsheet data and styles to XLSX and JSON and now with RTL support.
 
 Reverse engineered from Excel spreadsheet files as a project.
+based on <a href="https://github.com/guyonroche/exceljs">exceljs</a>.
 
 # Installation
 
-npm install exceljs
+npm install exceljs-rtl
 
 # New Features!
 
 <ul>
+    <li>
+        RTL Support ('A' Column on the right side)
+    </li>
     <li>
         Merged <a href="https://github.com/guyonroche/exceljs/pull/245">Stops Bluebird warning about unreturned promise #245</a>.
         Thanks to <a href="https://github.com/robinbullocks4rb">robinbullocks4rb</a> for the contribution.
@@ -21,24 +25,7 @@ npm install exceljs
     </li>
 </ul>
 
-# Contributions
 
-Contributions are very welcome! It helps me know what features are desired or what bugs are causing the most pain.
-
-I have just one request; If you submit a pull request for a bugfix, please add a unit-test or integration-test (in the spec folder) that catches the problem.
- Even a PR that just has a failing test is fine - I can analyse what the test is doing and fix the code from that. 
-
-# Backlog
-
-<ul>
-    <li>Images - background, in-cell, printing, etc.</li>
-    <li>There are still more print-settings to add; Fixed rows/cols, etc.</li>
-    <li>Still working my way through PRs and Issues and improving the tests.</li>
-    <li>XLSX Streaming Reader.</li>
-    <li>ES6ify - This module was originally built for NodeJS 0.12.4 but things have moved on since then and I really want to start taking advantage of the modern JS features.
-        I would also like to take the time to look at transpilers to support the earlier JSs</li>
-    <li>Parsing CSV with Headers</li>
-</ul>
 
 # Contents
 
@@ -108,7 +95,7 @@ I have just one request; If you submit a pull request for a bugfix, please add a
 # Interface
 
 ```javascript
-var Excel = require('exceljs');
+var Excel = require('exceljs-rtl');
 ```
 
 ## Create a Workbook
@@ -162,8 +149,8 @@ var sheet = workbook.addWorksheet('My Sheet', {properties:{tabColor:{argb:'FFC00
 // create a sheet where the grid lines are hidden
 var sheet = workbook.addWorksheet('My Sheet', {properties: {showGridLines: false}});
 
-// create a sheet with the first row and column frozen
-var sheet = workbook.addWorksheet('My Sheet', {views:[{xSplit: 1, ySplit:1}]});
+// create a sheet(RTL - 'A' column on the right) with the first row and column frozen
+var sheet = workbook.addWorksheet('My Sheet', {views:[{xSplit: 1, ySplit:1, rightToLeft: 1}]});
 ```
 
 ## Access Worksheets
