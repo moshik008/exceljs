@@ -1,4 +1,4 @@
-# ExcelJS
+# ExcelJS-RTL
 
 Read, manipulate and write spreadsheet data and styles to XLSX and JSON and now with RTL support.
 
